@@ -5,9 +5,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cart_product_details_model.dart';
 export 'cart_product_details_model.dart';
@@ -54,8 +57,8 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 60.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 60.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -74,8 +77,8 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 60.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 60.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -94,8 +97,8 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
             curve: Curves.easeInOut,
             delay: 350.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 60.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 60.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -114,8 +117,8 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
             curve: Curves.easeInOut,
             delay: 450.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 60.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 60.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -134,8 +137,8 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: const Offset(-20.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-20.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -183,14 +186,14 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
             wrapWithModel(
               model: _model.cartBadgeModel,
               updateCallback: () => setState(() {}),
-              child: const CartBadgeWidget(),
+              child: CartBadgeWidget(),
             ),
           ],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
           child: Wrap(
             spacing: 0.0,
             runSpacing: 0.0,
@@ -208,10 +211,10 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                   Container(
                     width: 200.0,
                     height: 200.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                       child: Hero(
                         tag: valueOrDefault<String>(
                           widget.productRef?.coverImage,
@@ -221,8 +224,8 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12.0),
                           child: CachedNetworkImage(
-                            fadeInDuration: const Duration(milliseconds: 300),
-                            fadeOutDuration: const Duration(milliseconds: 300),
+                            fadeInDuration: Duration(milliseconds: 300),
+                            fadeOutDuration: Duration(milliseconds: 300),
                             imageUrl: valueOrDefault<String>(
                               widget.productRef?.coverImage,
                               'https://images.unsplash.com/photo-1542291026-7eec264c27ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw4fHxwcm9kdWN0fGVufDB8fHx8MTcwMjU3NzUzNnww&ixlib=rb-4.0.3&q=80&w=800',
@@ -238,29 +241,29 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                 ],
               ),
               Container(
-                decoration: const BoxDecoration(),
+                decoration: BoxDecoration(),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Container(
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 570.0,
                   ),
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 16.0, 0.0),
                                   child: Text(
                                     valueOrDefault<String>(
@@ -278,7 +281,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 4.0, 0.0, 0.0),
                                 child: Text(
                                   valueOrDefault<String>(
@@ -303,7 +306,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 0.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
@@ -321,7 +324,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                               animationsMap['textOnPageLoadAnimation3']!),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 16.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
@@ -338,7 +341,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                               animationsMap['textOnPageLoadAnimation4']!),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 32.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -346,7 +349,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 16.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -392,7 +395,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                               letterSpacing: 0.0,
                                             ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
+                                      duration: Duration(milliseconds: 4000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).primary,
                                     ),
@@ -401,9 +404,9 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                 text: 'Add to Cart',
                                 options: FFButtonOptions(
                                   height: 60.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       32.0, 0.0, 32.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -413,7 +416,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                         letterSpacing: 0.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -424,7 +427,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -435,7 +438,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                   context.pushNamed(
                                     'cart_Details',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.bottomToTop,
@@ -447,9 +450,9 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                 text: 'Proceed to checkout',
                                 options: FFButtonOptions(
                                   height: 60.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       32.0, 0.0, 32.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -459,7 +462,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                                         letterSpacing: 0.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -469,7 +472,7 @@ class _CartProductDetailsWidgetState extends State<CartProductDetailsWidget>
                             ],
                           ),
                         ),
-                      ].addToEnd(const SizedBox(height: 150.0)),
+                      ].addToEnd(SizedBox(height: 150.0)),
                     ),
                   ),
                 ),

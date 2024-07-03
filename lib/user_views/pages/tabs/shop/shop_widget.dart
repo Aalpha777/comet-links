@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/user_views/product_card/product_card_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'shop_model.dart';
 export 'shop_model.dart';
 
@@ -41,17 +43,17 @@ class _ShopWidgetState extends State<ShopWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, -1.0),
+      alignment: AlignmentDirectional(0.0, -1.0),
       child: Container(
         width: double.infinity,
-        constraints: const BoxConstraints(
+        constraints: BoxConstraints(
           maxWidth: 1170.0,
         ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 24.0),
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 24.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +63,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
                     child: Text(
                       'Get a comet.',
                       style:
@@ -74,7 +76,7 @@ class _ShopWidgetState extends State<ShopWidget> {
                   wrapWithModel(
                     model: _model.cartBadgeModel,
                     updateCallback: () => setState(() {}),
-                    child: const CartBadgeWidget(),
+                    child: CartBadgeWidget(),
                   ),
                 ],
               ),
@@ -86,9 +88,9 @@ class _ShopWidgetState extends State<ShopWidget> {
                     ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                 child: Container(
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: StreamBuilder<List<ProductsRecord>>(
                     stream: queryProductsRecord(),
                     builder: (context, snapshot) {

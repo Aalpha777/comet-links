@@ -3,8 +3,13 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'auth3_login_model.dart';
 export 'auth3_login_model.dart';
 
@@ -50,15 +55,15 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.9, 0.9),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.9, 0.9),
+            end: Offset(1.0, 1.0),
           ),
           TiltEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0, -0.524),
-            end: const Offset(0, 0),
+            begin: Offset(0, -0.524),
+            end: Offset(0, 0),
           ),
         ],
       ),
@@ -96,7 +101,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                 Expanded(
                   flex: 5,
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    alignment: AlignmentDirectional(0.0, -1.0),
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
@@ -106,9 +111,9 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                             FlutterFlowTheme.of(context).primaryBackground,
                             FlutterFlowTheme.of(context).accent1
                           ],
-                          stops: const [0.0, 1.0],
-                          begin: const AlignmentDirectional(1.0, 0.0),
-                          end: const AlignmentDirectional(-1.0, 0),
+                          stops: [0.0, 1.0],
+                          begin: AlignmentDirectional(1.0, 0.0),
+                          end: AlignmentDirectional(-1.0, 0),
                         ),
                         borderRadius: BorderRadius.circular(0.0),
                       ),
@@ -118,21 +123,21 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
               Expanded(
                 flex: 5,
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(16.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16.0),
                       child: Container(
                         width: double.infinity,
                         height: double.infinity,
-                        constraints: const BoxConstraints(
+                        constraints: BoxConstraints(
                           maxWidth: 570.0,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        alignment: const AlignmentDirectional(0.0, -1.0),
+                        alignment: AlignmentDirectional(0.0, -1.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -141,7 +146,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                               Container(
                                 width: double.infinity,
                                 height: 140.0,
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(16.0),
                                     bottomRight: Radius.circular(16.0),
@@ -149,16 +154,16 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                     topRight: Radius.circular(0.0),
                                   ),
                                 ),
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 12.0, 0.0),
                                         child: Icon(
                                           Icons.flourescent_rounded,
@@ -181,9 +186,9 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -200,7 +205,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                             ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 24.0),
                                         child: Text(
                                           'Let\'s get started by filling out the form below.',
@@ -213,9 +218,9 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller: _model
@@ -223,7 +228,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                             focusNode:
                                                 _model.emailAddressFocusNode,
                                             autofocus: true,
-                                            autofillHints: const [
+                                            autofillHints: [
                                               AutofillHints.email
                                             ],
                                             obscureText: false,
@@ -300,16 +305,16 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller:
                                                 _model.passwordTextController,
                                             focusNode: _model.passwordFocusNode,
                                             autofocus: true,
-                                            autofillHints: const [
+                                            autofillHints: [
                                               AutofillHints.password
                                             ],
                                             obscureText:
@@ -407,10 +412,10 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(1.0, -1.0),
+                                            AlignmentDirectional(1.0, -1.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -438,9 +443,9 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                             options: FFButtonOptions(
                                               width: 200.0,
                                               height: 44.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -454,7 +459,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                               elevation: 3.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -467,7 +472,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
 
                                       // You will have to add an action on this rich text to go to your login page.
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -479,7 +484,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                               'auth_3_Create',
                                               extra: <String, dynamic>{
                                                 kTransitionInfoKey:
-                                                    const TransitionInfo(
+                                                    TransitionInfo(
                                                   hasTransition: true,
                                                   transitionType:
                                                       PageTransitionType.fade,
@@ -494,7 +499,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                                 .textScaler,
                                             text: TextSpan(
                                               children: [
-                                                const TextSpan(
+                                                TextSpan(
                                                   text:
                                                       'Already have an account? ',
                                                   style: TextStyle(),
@@ -537,13 +542,13 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
 
                                       // You will have to add an action on this rich text to go to your login page.
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: RichText(
                                           textScaler:
                                               MediaQuery.of(context).textScaler,
                                           text: TextSpan(
-                                            children: const [
+                                            children: [
                                               TextSpan(
                                                 text: 'Additional options:',
                                                 style: TextStyle(),
@@ -560,14 +565,14 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, -1.0),
+                                            AlignmentDirectional(-1.0, -1.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             context.pushNamed(
                                               'auth_3_phone',
                                               extra: <String, dynamic>{
                                                 kTransitionInfoKey:
-                                                    const TransitionInfo(
+                                                    TransitionInfo(
                                                   hasTransition: true,
                                                   transitionType:
                                                       PageTransitionType.fade,
@@ -578,7 +583,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                             );
                                           },
                                           text: 'Continue with Phone',
-                                          icon: const Icon(
+                                          icon: Icon(
                                             Icons.phone_sharp,
                                             size: 15.0,
                                           ),
@@ -586,10 +591,10 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                             width: double.infinity,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBackground,
@@ -632,7 +637,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
 
                               // You will have to add an action on this rich text to go to your login page.
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 120.0, 0.0, 24.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -643,7 +648,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                     context.pushNamed(
                                       'auth_3_ForgotPassword',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -657,7 +662,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                         MediaQuery.of(context).textScaler,
                                     text: TextSpan(
                                       children: [
-                                        const TextSpan(
+                                        TextSpan(
                                           text: 'Forgot Password? ',
                                           style: TextStyle(),
                                         ),

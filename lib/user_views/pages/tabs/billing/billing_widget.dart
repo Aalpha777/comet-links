@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'billing_model.dart';
 export 'billing_model.dart';
 
@@ -38,23 +40,23 @@ class _BillingWidgetState extends State<BillingWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, -1.0),
+      alignment: AlignmentDirectional(0.0, -1.0),
       child: Container(
         width: double.infinity,
-        constraints: const BoxConstraints(
+        constraints: BoxConstraints(
           maxWidth: 1170.0,
         ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 24.0),
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 24.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
                 child: Text(
                   'Billing',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -71,10 +73,10 @@ class _BillingWidgetState extends State<BillingWidget> {
                     ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                 child: Container(
-                  decoration: const BoxDecoration(),
-                  child: const Column(
+                  decoration: BoxDecoration(),
+                  child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [],
                   ),

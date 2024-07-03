@@ -3,7 +3,11 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cart_summary_model.dart';
 export 'cart_summary_model.dart';
@@ -12,7 +16,7 @@ class CartSummaryWidget extends StatefulWidget {
   const CartSummaryWidget({
     super.key,
     bool? showTotal,
-  }) : showTotal = showTotal ?? false;
+  }) : this.showTotal = showTotal ?? false;
 
   final bool showTotal;
 
@@ -49,12 +53,12 @@ class _CartSummaryWidgetState extends State<CartSummaryWidget> {
     context.watch<FFAppState>();
 
     return Container(
-      constraints: const BoxConstraints(
+      constraints: BoxConstraints(
         maxWidth: 750.0,
       ),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: const [
+        boxShadow: [
           BoxShadow(
             blurRadius: 4.0,
             color: Color(0x33000000),
@@ -67,7 +71,7 @@ class _CartSummaryWidgetState extends State<CartSummaryWidget> {
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +84,7 @@ class _CartSummaryWidgetState extends State<CartSummaryWidget> {
                   ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 12.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 12.0),
               child: Text(
                 'Below is the list of items in your cart.',
                 style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -120,7 +124,7 @@ class _CartSummaryWidgetState extends State<CartSummaryWidget> {
             ),
             if (widget.showTotal)
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
