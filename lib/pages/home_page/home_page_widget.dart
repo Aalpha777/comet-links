@@ -150,6 +150,43 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ],
                 ),
+                FFButtonWidget(
+                  onPressed: () async {
+                    context.pushNamed(
+                      'Launchpad',
+                      queryParameters: {
+                        'launchpad': serializeParam(
+                          'apptitan',
+                          ParamType.String,
+                        ),
+                      }.withoutNulls,
+                    );
+                  },
+                  text: 'Get Link',
+                  icon: const Icon(
+                    Icons.add_link,
+                    size: 30.0,
+                  ),
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                    iconPadding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: FlutterFlowTheme.of(context).primary,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily: 'Inter',
+                          color: Colors.white,
+                          letterSpacing: 0.0,
+                        ),
+                    elevation: 3.0,
+                    borderSide: const BorderSide(
+                      color: Colors.transparent,
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
               ],
             ),
           ),
