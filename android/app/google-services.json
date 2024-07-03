@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "897412843394",
+    "project_id": "cometlinks",
+    "storage_bucket": "cometlinks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897412843394:android:8563e2c2df5d13f4cbb19b",
+        "android_client_info": {
+          "package_name": "com.apptitan.cometlinks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897412843394-6j386e5p2hikpfofnj6oabdknj9hsvjv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apptitan.cometlinks",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "897412843394-mt4l78t4v9mljbt3ebuapcbkj6rfml8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB16UW5l8q4FROKUNOX3tofBC1IY2DmLQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897412843394-mt4l78t4v9mljbt3ebuapcbkj6rfml8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "897412843394-3bqol8rpotsjl2iq1ogftd6rbfe05rgb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.apptitan.cometlinks"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
