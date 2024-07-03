@@ -1,12 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/user_views/pages/tabs/billing/billing_widget.dart';
 import '/user_views/pages/tabs/main_dashboard/main_dashboard_widget.dart';
 import '/user_views/pages/tabs/shop/shop_widget.dart';
 import '/user_views/pages/tabs/side_nav/side_nav_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'user_dashboard_model.dart';
 export 'user_dashboard_model.dart';
@@ -58,7 +56,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                 model: _model.sideNavModel,
                 updateCallback: () => setState(() {}),
                 updateOnChange: true,
-                child: SideNavWidget(
+                child: const SideNavWidget(
                   selectedNav: 1,
                 ),
               ),
@@ -70,19 +68,19 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                       wrapWithModel(
                         model: _model.mainDashboardModel,
                         updateCallback: () => setState(() {}),
-                        child: MainDashboardWidget(),
+                        child: const MainDashboardWidget(),
                       ),
                     if (FFAppState().UserNavBar1Controller == 2)
                       wrapWithModel(
                         model: _model.billingModel,
                         updateCallback: () => setState(() {}),
-                        child: BillingWidget(),
+                        child: const BillingWidget(),
                       ),
                     if (FFAppState().UserNavBar1Controller == 3)
                       wrapWithModel(
                         model: _model.shopModel,
                         updateCallback: () => setState(() {}),
-                        child: ShopWidget(),
+                        child: const ShopWidget(),
                       ),
                   ],
                 ),

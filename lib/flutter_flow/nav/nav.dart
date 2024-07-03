@@ -1,21 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -80,19 +73,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? UserDashboardWidget() : HomePageWidget(),
+          appStateNotifier.loggedIn ? const UserDashboardWidget() : const HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? UserDashboardWidget()
-              : HomePageWidget(),
+              ? const UserDashboardWidget()
+              : const HomePageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePeag',
-          builder: (context, params) => HomePageWidget(),
+          builder: (context, params) => const HomePageWidget(),
         ),
         FFRoute(
           name: 'Launchpad',
@@ -108,7 +101,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'UserDashboard',
           path: '/userDashboard',
           requireAuth: true,
-          builder: (context, params) => UserDashboardWidget(),
+          builder: (context, params) => const UserDashboardWidget(),
         ),
         FFRoute(
           name: 'cart_ProductDetails',
@@ -126,7 +119,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'cart_Details',
           path: '/cartDetails',
-          builder: (context, params) => CartDetailsWidget(),
+          builder: (context, params) => const CartDetailsWidget(),
         ),
         FFRoute(
           name: 'cart_OrderDetails',
@@ -144,32 +137,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'cart_OrderHistory',
           path: '/cartOrderHistory',
-          builder: (context, params) => CartOrderHistoryWidget(),
+          builder: (context, params) => const CartOrderHistoryWidget(),
         ),
         FFRoute(
           name: 'cart_Checkout',
           path: '/cartCheckout',
-          builder: (context, params) => CartCheckoutWidget(),
+          builder: (context, params) => const CartCheckoutWidget(),
         ),
         FFRoute(
           name: 'cart_successPage',
           path: '/cartSuccessPage',
-          builder: (context, params) => CartSuccessPageWidget(),
+          builder: (context, params) => const CartSuccessPageWidget(),
         ),
         FFRoute(
           name: 'auth_3_Create',
           path: '/auth3Create',
-          builder: (context, params) => Auth3CreateWidget(),
+          builder: (context, params) => const Auth3CreateWidget(),
         ),
         FFRoute(
           name: 'auth_3_Login',
           path: '/auth3Login',
-          builder: (context, params) => Auth3LoginWidget(),
+          builder: (context, params) => const Auth3LoginWidget(),
         ),
         FFRoute(
           name: 'auth_3_phone',
           path: '/auth3Phone',
-          builder: (context, params) => Auth3PhoneWidget(),
+          builder: (context, params) => const Auth3PhoneWidget(),
         ),
         FFRoute(
           name: 'auth_3_verifyPhone',
@@ -184,7 +177,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'auth_3_ForgotPassword',
           path: '/auth3ForgotPassword',
-          builder: (context, params) => Auth3ForgotPasswordWidget(),
+          builder: (context, params) => const Auth3ForgotPasswordWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -424,7 +417,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

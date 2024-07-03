@@ -5,13 +5,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cart_order_details_model.dart';
 export 'cart_order_details_model.dart';
 
@@ -80,7 +75,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -92,10 +87,10 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
             children: [
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 1170.0,
                     ),
                     decoration: BoxDecoration(
@@ -107,12 +102,12 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                         children: [
                           Container(
                             width: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 1170.0,
                             ),
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -124,7 +119,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                     tablet: false,
                                   ))
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 0.0, 12.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -140,7 +135,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 2.0, 0.0, 2.0),
                                                 child: FlutterFlowIconButton(
@@ -162,7 +157,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 0.0, 8.0, 0.0),
                                                 child: Icon(
@@ -174,7 +169,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 8.0, 16.0, 8.0),
                                                 child: Container(
@@ -188,11 +183,11 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                             8.0),
                                                   ),
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 4.0,
                                                                 12.0, 4.0),
                                                     child: Text(
@@ -217,10 +212,10 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                       ),
                                     ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      'Order #${widget.orderRef?.orderNumber?.toString()}',
+                                      'Order #${widget.orderRef?.orderNumber.toString()}',
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
@@ -230,7 +225,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 4.0, 0.0, 0.0),
                                     child: Text(
                                       'Below are the details of your order.',
@@ -247,12 +242,12 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(16.0),
                               child: Container(
                                 width: double.infinity,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: 1170.0,
                                 ),
                                 decoration: BoxDecoration(
@@ -269,7 +264,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                     Expanded(
                                       flex: 8,
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 16.0, 16.0, 16.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -277,7 +272,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 12.0),
                                               child: Text(
@@ -295,7 +290,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               builder: (context) {
                                                 final orderItems = widget
                                                         .orderRef?.products
-                                                        ?.toList() ??
+                                                        .toList() ??
                                                     [];
                                                 return ListView.builder(
                                                   padding: EdgeInsets.zero,
@@ -331,7 +326,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               },
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 16.0, 0.0, 16.0),
                                               child: Divider(
@@ -342,7 +337,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 12.0),
                                               child: Text(
@@ -357,7 +352,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -376,7 +371,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    'Order #${widget.orderRef?.orderNumber?.toString()}',
+                                                    'Order #${widget.orderRef?.orderNumber.toString()}',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -389,7 +384,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -423,7 +418,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -474,7 +469,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -518,7 +513,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -561,7 +556,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 16.0, 0.0, 16.0),
                                               child: Divider(
@@ -582,7 +577,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                       ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
                                                 'Transaction for monthly subscription.',
@@ -603,7 +598,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                               desktop: false,
                                             ))
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 16.0, 0.0, 0.0),
                                                 child: Column(
@@ -614,7 +609,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -636,7 +631,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -662,7 +657,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -678,7 +673,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             12.0),
                                                                 child: Row(
@@ -706,7 +701,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(2.0),
+                                                                            const EdgeInsets.all(2.0),
                                                                         child:
                                                                             AuthUserStreamWidget(
                                                                           builder: (context) =>
@@ -715,8 +710,8 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                                 BorderRadius.circular(10.0),
                                                                             child:
                                                                                 CachedNetworkImage(
-                                                                              fadeInDuration: Duration(milliseconds: 300),
-                                                                              fadeOutDuration: Duration(milliseconds: 300),
+                                                                              fadeInDuration: const Duration(milliseconds: 300),
+                                                                              fadeOutDuration: const Duration(milliseconds: 300),
                                                                               imageUrl: currentUserPhoto,
                                                                               width: 44.0,
                                                                               height: 44.0,
@@ -727,7 +722,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           12.0,
                                                                           0.0,
                                                                           0.0,
@@ -755,7 +750,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 4.0,
                                                                                 0.0,
@@ -791,7 +786,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -808,14 +803,14 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 48.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -852,7 +847,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         12.0,
@@ -868,14 +863,14 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 48.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -902,7 +897,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           width: 16.0)),
                                                     ),
                                                   ],
@@ -923,7 +918,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                         flex: 5,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 16.0, 16.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -931,7 +926,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 12.0),
                                                 child: Text(
@@ -946,7 +941,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Container(
@@ -968,7 +963,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 12.0),
                                                     child: Column(
@@ -980,7 +975,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   12.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -1008,7 +1003,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               2.0),
                                                                   child:
@@ -1022,9 +1017,9 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                       child:
                                                                           CachedNetworkImage(
                                                                         fadeInDuration:
-                                                                            Duration(milliseconds: 300),
+                                                                            const Duration(milliseconds: 300),
                                                                         fadeOutDuration:
-                                                                            Duration(milliseconds: 300),
+                                                                            const Duration(milliseconds: 300),
                                                                         imageUrl:
                                                                             currentUserPhoto,
                                                                         width:
@@ -1040,7 +1035,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             0.0,
@@ -1075,7 +1070,7 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           4.0,
                                                                           0.0,
@@ -1104,10 +1099,10 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 0.0),
                                                   child: FFButtonWidget(
@@ -1120,14 +1115,14 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                       width: double.infinity,
                                                       height: 48.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1156,10 +1151,10 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 12.0, 0.0, 0.0),
                                                   child: FFButtonWidget(
@@ -1172,14 +1167,14 @@ class _CartOrderDetailsWidgetState extends State<CartOrderDetailsWidget> {
                                                       width: double.infinity,
                                                       height: 48.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,

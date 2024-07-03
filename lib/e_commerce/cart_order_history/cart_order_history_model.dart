@@ -1,14 +1,6 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
-import '/e_commerce/empty_state_dynamic/empty_state_dynamic_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'cart_order_history_widget.dart' show CartOrderHistoryWidget;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CartOrderHistoryModel extends FlutterFlowModel<CartOrderHistoryWidget> {
   ///  State fields for stateful widgets in this page.

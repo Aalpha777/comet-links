@@ -3,14 +3,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'auth3_create_model.dart';
 export 'auth3_create_model.dart';
 
@@ -59,15 +54,15 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.9, 0.9),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.9, 0.9),
+            end: const Offset(1.0, 1.0),
           ),
           TiltEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0, 0.524),
-            end: Offset(0, 0),
+            begin: const Offset(0, 0.524),
+            end: const Offset(0, 0),
           ),
         ],
       ),
@@ -105,7 +100,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                 Expanded(
                   flex: 5,
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
@@ -115,9 +110,9 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                             FlutterFlowTheme.of(context).primaryBackground,
                             FlutterFlowTheme.of(context).accent1
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(1.0, 0.0),
-                          end: AlignmentDirectional(-1.0, 0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(1.0, 0.0),
+                          end: const AlignmentDirectional(-1.0, 0),
                         ),
                         borderRadius: BorderRadius.circular(0.0),
                       ),
@@ -127,21 +122,21 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
               Expanded(
                 flex: 5,
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16.0),
                       child: Container(
                         width: double.infinity,
                         height: double.infinity,
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           maxWidth: 570.0,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        alignment: AlignmentDirectional(0.0, -1.0),
+                        alignment: const AlignmentDirectional(0.0, -1.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -150,7 +145,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                               Container(
                                 width: double.infinity,
                                 height: 140.0,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(16.0),
                                     bottomRight: Radius.circular(16.0),
@@ -158,16 +153,16 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                     topRight: Radius.circular(0.0),
                                   ),
                                 ),
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 12.0, 0.0),
                                         child: Icon(
                                           Icons.flourescent_rounded,
@@ -190,9 +185,9 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 32.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -209,7 +204,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                             ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 24.0),
                                         child: Text(
                                           'Let\'s get started by filling out the form below.',
@@ -222,9 +217,9 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
-                                        child: Container(
+                                        child: SizedBox(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller: _model
@@ -232,7 +227,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                             focusNode:
                                                 _model.emailAddressFocusNode,
                                             autofocus: true,
-                                            autofillHints: [
+                                            autofillHints: const [
                                               AutofillHints.email
                                             ],
                                             obscureText: false,
@@ -309,16 +304,16 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
-                                        child: Container(
+                                        child: SizedBox(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller:
                                                 _model.passwordTextController,
                                             focusNode: _model.passwordFocusNode,
                                             autofocus: true,
-                                            autofillHints: [
+                                            autofillHints: const [
                                               AutofillHints.password
                                             ],
                                             obscureText:
@@ -415,9 +410,9 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
-                                        child: Container(
+                                        child: SizedBox(
                                           width: double.infinity,
                                           child: TextFormField(
                                             controller: _model
@@ -425,7 +420,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                             focusNode:
                                                 _model.passwordConfirmFocusNode,
                                             autofocus: true,
-                                            autofillHints: [
+                                            autofillHints: const [
                                               AutofillHints.password
                                             ],
                                             obscureText: !_model
@@ -524,10 +519,10 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(1.0, -1.0),
+                                            const AlignmentDirectional(1.0, -1.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -540,7 +535,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                                       .text) {
                                                 ScaffoldMessenger.of(context)
                                                     .showSnackBar(
-                                                  SnackBar(
+                                                  const SnackBar(
                                                     content: Text(
                                                       'Passwords don\'t match!',
                                                     ),
@@ -570,9 +565,9 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                             options: FFButtonOptions(
                                               width: 200.0,
                                               height: 44.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -586,7 +581,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                               elevation: 3.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -599,7 +594,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
 
                                       // You will have to add an action on this rich text to go to your login page.
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
@@ -611,7 +606,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                               'auth_3_Login',
                                               extra: <String, dynamic>{
                                                 kTransitionInfoKey:
-                                                    TransitionInfo(
+                                                    const TransitionInfo(
                                                   hasTransition: true,
                                                   transitionType:
                                                       PageTransitionType.fade,
@@ -626,7 +621,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                                 .textScaler,
                                             text: TextSpan(
                                               children: [
-                                                TextSpan(
+                                                const TextSpan(
                                                   text:
                                                       'Already have an account? ',
                                                   style: TextStyle(),
@@ -669,13 +664,13 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
 
                                       // You will have to add an action on this rich text to go to your login page.
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: RichText(
                                           textScaler:
                                               MediaQuery.of(context).textScaler,
                                           text: TextSpan(
-                                            children: [
+                                            children: const [
                                               TextSpan(
                                                 text: 'Additional options:',
                                                 style: TextStyle(),
@@ -692,7 +687,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, -1.0),
+                                            const AlignmentDirectional(-1.0, -1.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             GoRouter.of(context)
@@ -707,17 +702,17 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                                 context.mounted);
                                           },
                                           text: 'Continue with Google\n',
-                                          icon: FaIcon(
+                                          icon: const FaIcon(
                                             FontAwesomeIcons.google,
                                           ),
                                           options: FFButtonOptions(
                                             width: double.infinity,
                                             height: 44.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBackground,
@@ -755,14 +750,14 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, -1.0),
+                                            const AlignmentDirectional(-1.0, -1.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             context.pushNamed(
                                               'auth_3_phone',
                                               extra: <String, dynamic>{
                                                 kTransitionInfoKey:
-                                                    TransitionInfo(
+                                                    const TransitionInfo(
                                                   hasTransition: true,
                                                   transitionType:
                                                       PageTransitionType.fade,
@@ -773,17 +768,17 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                             );
                                           },
                                           text: 'Continue with Phone',
-                                          icon: FaIcon(
+                                          icon: const FaIcon(
                                             FontAwesomeIcons.google,
                                           ),
                                           options: FFButtonOptions(
                                             width: double.infinity,
                                             height: 44.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBackground,

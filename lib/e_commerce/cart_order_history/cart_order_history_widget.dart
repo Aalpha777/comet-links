@@ -3,11 +3,7 @@ import '/backend/backend.dart';
 import '/e_commerce/empty_state_dynamic/empty_state_dynamic_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cart_order_history_model.dart';
 export 'cart_order_history_model.dart';
 
@@ -55,20 +51,20 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
             children: [
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 1170.0,
                     ),
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 20.0, 0.0, 0.0),
                             child: Text(
                               'Recent Orders',
@@ -81,7 +77,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 4.0, 0.0, 0.0),
                             child: Text(
                               'Below are your most recent orders',
@@ -95,11 +91,11 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 16.0, 0.0),
                             child: Container(
                               width: double.infinity,
-                              constraints: BoxConstraints(
+                              constraints: const BoxConstraints(
                                 maxWidth: double.infinity,
                               ),
                               decoration: BoxDecoration(
@@ -112,7 +108,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -228,7 +224,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                   snapshot.data!;
                               if (listViewOrdersRecordList.isEmpty) {
                                 return Center(
-                                  child: Container(
+                                  child: SizedBox(
                                     height: 300.0,
                                     child: EmptyStateDynamicWidget(
                                       icon: Icon(
@@ -252,7 +248,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                 );
                               }
                               return ListView.separated(
-                                padding: EdgeInsets.fromLTRB(
+                                padding: const EdgeInsets.fromLTRB(
                                   0,
                                   12.0,
                                   0,
@@ -263,12 +259,12 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                 scrollDirection: Axis.vertical,
                                 itemCount: listViewOrdersRecordList.length,
                                 separatorBuilder: (_, __) =>
-                                    SizedBox(height: 12.0),
+                                    const SizedBox(height: 12.0),
                                 itemBuilder: (context, listViewIndex) {
                                   final listViewOrdersRecord =
                                       listViewOrdersRecordList[listViewIndex];
                                   return Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -291,7 +287,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                       },
                                       child: Container(
                                         width: double.infinity,
-                                        constraints: BoxConstraints(
+                                        constraints: const BoxConstraints(
                                           maxWidth: 570.0,
                                         ),
                                         decoration: BoxDecoration(
@@ -307,7 +303,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 12.0, 16.0, 12.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -317,7 +313,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                               Expanded(
                                                 flex: 4,
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Column(
@@ -337,7 +333,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                                 .textScaler,
                                                         text: TextSpan(
                                                           children: [
-                                                            TextSpan(
+                                                            const TextSpan(
                                                               text: 'Order #: ',
                                                               style:
                                                                   TextStyle(),
@@ -381,7 +377,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     4.0,
@@ -439,11 +435,11 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                         ),
                                                         child: Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         7.0,
                                                                         0.0,
@@ -506,11 +502,11 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                         ),
                                                         child: Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -567,7 +563,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -586,7 +582,7 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                           ))
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -613,12 +609,12 @@ class _CartOrderHistoryWidgetState extends State<CartOrderHistoryWidget> {
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,

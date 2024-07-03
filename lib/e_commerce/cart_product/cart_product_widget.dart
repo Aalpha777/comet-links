@@ -4,11 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cart_product_model.dart';
 export 'cart_product_model.dart';
 
@@ -17,7 +13,7 @@ class CartProductWidget extends StatefulWidget {
     super.key,
     required this.product,
     bool? cartItem,
-  }) : this.cartItem = cartItem ?? true;
+  }) : cartItem = cartItem ?? true;
 
   final DocumentReference? product;
   final bool cartItem;
@@ -53,7 +49,7 @@ class _CartProductWidgetState extends State<CartProductWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
       child: FutureBuilder<ProductsRecord>(
         future: ProductsRecord.getDocumentOnce(widget.product!),
         builder: (context, snapshot) {
@@ -80,7 +76,7 @@ class _CartProductWidgetState extends State<CartProductWidget> {
                 BoxShadow(
                   blurRadius: 0.0,
                   color: FlutterFlowTheme.of(context).alternate,
-                  offset: Offset(
+                  offset: const Offset(
                     0.0,
                     1.0,
                   ),
@@ -93,18 +89,18 @@ class _CartProductWidgetState extends State<CartProductWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 1.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 1.0, 1.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(12.0),
                           child: CachedNetworkImage(
-                            fadeInDuration: Duration(milliseconds: 500),
-                            fadeOutDuration: Duration(milliseconds: 500),
+                            fadeInDuration: const Duration(milliseconds: 500),
+                            fadeOutDuration: const Duration(milliseconds: 500),
                             imageUrl: valueOrDefault<String>(
                               menuItemProductsRecord.coverImage,
                               'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/95c8dcbe-3d3f-46a9-9887-43161ef949c5/sleepers-of-the-week-release-date.jpg',
@@ -118,7 +114,7 @@ class _CartProductWidgetState extends State<CartProductWidget> {
                       Expanded(
                         flex: 3,
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 4.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -138,12 +134,12 @@ class _CartProductWidgetState extends State<CartProductWidget> {
                                     ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: RichText(
                                   textScaler: MediaQuery.of(context).textScaler,
                                   text: TextSpan(
-                                    children: [
+                                    children: const [
                                       TextSpan(
                                         text: 'Size: ',
                                         style: TextStyle(),
@@ -168,7 +164,7 @@ class _CartProductWidgetState extends State<CartProductWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                         child: Text(
                           valueOrDefault<String>(
                             formatNumber(
@@ -193,14 +189,14 @@ class _CartProductWidgetState extends State<CartProductWidget> {
                 if (widget.cartItem)
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 8.0, 12.0),
                             child: AutoSizeText(
                               valueOrDefault<String>(
